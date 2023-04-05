@@ -1,0 +1,258 @@
+[
+  {
+    "id": 2,
+    "style": "Fantasy Landscape",
+    "prompts": [
+      "A mystical, enchanted forest with ancient trees and magical creatures.",
+      "A breathtaking, panoramic view of a massive, imposing castle on a mountaintop.",
+      "A surreal, dreamlike environment with floating islands and strange, otherworldly creatures.",
+      "An ethereal, mystical garden filled with glowing flowers and exotic plants.",
+      "A magical, whimsical land of fairies and mythical creatures, with colorful forests and sparkling waterfalls.",
+      "A vast, open plain filled with towering, mystical pillars and ancient ruins.",
+      "A stunning, otherworldly landscape of jagged cliffs and glowing crystals.",
+      "A dark, ominous forest filled with twisted, gnarled trees and eerie creatures.",
+      "A magical, underwater world filled with colorful coral and strange sea creatures.",
+      "A fantastical, mystical city with towering spires and sparkling lights."
+    ]
+  },
+  {
+    "id": 3,
+    "style": "Anime Art Style",
+    "prompts": [
+      "A bustling, neon-lit city filled with high-tech gadgets and futuristic architecture.",
+      "A colorful, playful world filled with cute, chibi-style characters and whimsical scenery.",
+      "A dramatic, action-packed scene with dynamic, anime-style characters engaged in battle.",
+      "A peaceful, idyllic village filled with charming, anime-style characters and lush, vibrant scenery.",
+      "A dark, brooding landscape filled with intense, anime-style characters and dramatic lighting.",
+      "A thrilling, high-speed chase scene through a futuristic, cyberpunk city.",
+      "A fantastical, epic adventure through a world filled with anime-style characters and magical creatures.",
+      "A charming, slice-of-life scene with lovable, anime-style characters in a cozy, comfortable setting.",
+      "A mesmerizing, psychedelic world with trippy, anime-inspired visuals and mind-bending effects.",
+      "A whimsical, fantastical world filled with cute, anime-style animals and magical scenery."
+    ]
+  },
+  {
+    "id": 4,
+    "style": "Surreal Style",
+    "prompts": [
+      "A surreal, dreamlike landscape with floating objects and strange, otherworldly creatures.",
+      "A mind-bending, psychedelic world filled with trippy, abstract shapes and colors.",
+      "A dark, eerie environment with twisted, surreal forms and haunting atmosphere.",
+      "An abstract, minimalist world with geometric shapes and stark, contrasting colors.",
+      "A fantastical, dreamlike world filled with impossible architecture and whimsical creatures.",
+      "A surreal, nightmarish landscape with twisted, distorted forms and surreal lighting.",
+      "A surreal, psychedelic journey through a strange, otherworldly realm.",
+      "A haunting, surreal landscape with ghostly apparitions and unsettling atmosphere.",
+      "A trippy, surreal adventure through a world filled with strange, surreal creatures and objects.",
+      "A surreal, abstract world filled with intriguing, thought-provoking imagery and symbolism."
+    ]
+  },
+  {
+    "id": 5,
+    "style": "Digital Painting",
+    "prompts": [
+      "A stunning, photorealistic landscape with intricate details and breathtaking colors.",
+      "An epic, grand-scale battle scene with highly-detailed, hyper-realistic characters and environments.",
+      "A beautiful, serene portrait with soft, delicate colors and lifelike details.",
+      "A vivid, colorful scene with bold, striking brushstrokes and abstract shapes.",
+      "An intricate, highly-detailed cityscape with realistic lighting and textures.",
+      "A stunning, hyper-realistic portrait with lifelike skin tones and intricate details.",
+      "A vibrant, colorful world with highly-detailed textures and intricate patterns.",
+      "A breathtaking, photorealistic still life with highly-detailed textures and vibrant colors.",
+      "An epic, cinematic landscape with stunning, realistic lighting and textures.",
+      "A beautiful, realistic depiction of a peaceful, idyllic countryside with lush greenery and serene skies."
+    ]
+  },
+  {
+    "id": 6,
+    "style": "Scenic",
+    "prompts": [
+      "A serene, peaceful landscape with rolling hills and a gentle, babbling brook.",
+      "A stunning, panoramic view of a snow-capped mountain range at sunrise.",
+      "A breathtaking, picturesque coastline with rugged cliffs and crashing waves.",
+      "A beautiful, tranquil lake surrounded by colorful, autumnal foliage.",
+      "A peaceful, idyllic countryside scene with fields of wildflowers and grazing animals.",
+      "A mesmerizing, otherworldly desert landscape with towering sand dunes and stunning sunsets.",
+      "A stunning, panoramic view of a lush, tropical rainforest with exotic flora and fauna.",
+      "A majestic, awe-inspiring waterfall cascading down into a crystal-clear pool below.",
+      "A tranquil, serene garden with lush greenery and beautiful, blooming flowers.",
+      "A picturesque, rustic countryside scene with charming, old-fashioned architecture and vibrant colors."
+    ]
+  },
+  {
+    "id": 7,
+    "style": "Nebula",
+    "prompts": [
+      "A stunning, otherworldly view of a colorful, vibrant nebula stretching out into infinity.",
+      "An awe-inspiring, epic journey through a vast, sprawling galaxy filled with stars and nebulae.",
+      "A breathtaking, panoramic view of a massive, glowing supernova exploding in the darkness of space.",
+      "A mesmerizing, hypnotic trip through the swirling, colorful gases and dust of a massive nebula.",
+      "A surreal, dreamlike landscape of strange, glowing nebulae and sparkling stars.",
+      "A stunning, realistic depiction of the vast, endless expanse of space with stars and planets in the distance.",
+      "An epic, cinematic space battle set against a backdrop of stunning, surreal nebulae.",
+      "A mesmerizing, hypnotic view of a massive, spiraling galaxy stretching out into infinity.",
+      "A stunning, panoramic view of a massive, glowing gas giant planet surrounded by colorful, swirling storms.",
+      "A surreal, dreamlike view of a massive, glowing nebula filled with strange, otherworldly creatures and objects."
+    ]
+  },
+  {
+    "id": 9,
+    "style": "Realistic",
+    "prompts": [
+      "A stunning, photorealistic landscape with lifelike textures and realistic lighting.",
+      "A breathtaking, hyper-realistic portrait with lifelike skin tones and intricate details.",
+      "A realistic, highly-detailed cityscape with lifelike textures and lighting.",
+      "A beautifully-rendered, lifelike still life with intricate details and vibrant colors.",
+      "A realistic, highly-detailed portrait with lifelike features and realistic lighting.",
+      "A stunning, photorealistic landscape with lifelike trees and plants and realistic lighting.",
+      "A realistic, highly-detailed depiction of a bustling city street with lifelike textures and lighting.",
+      "A breathtaking, hyper-realistic depiction of a majestic animal with intricate fur and lifelike features.",
+      "A beautifully-rendered, lifelike depiction of a peaceful, idyllic countryside with realistic lighting and textures.",
+      "A stunning, photorealistic depiction of a tranquil, serene beach with lifelike textures and lighting."
+    ]
+  },
+  {
+    "id": 10,
+    "style": "SciFi",
+    "prompts": [
+      "A futuristic, high-tech cityscape with sleek, sophisticated architecture and advanced gadgets.",
+      "An epic, intergalactic battle scene set against a backdrop of stunning, surreal nebulae and stars.",
+      "A mind-bending, surreal landscape of advanced, sci-fi technology and otherworldly creatures.",
+      "A thrilling, action-packed chase scene through a futuristic, cyberpunk metropolis.",
+      "A vast, sprawling space station with highly-detailed, hyper-realistic architecture and lighting.",
+      "An awe-inspiring, epic view of a massive, interstellar spaceship traveling through the cosmos.",
+      "A mesmerizing, hypnotic trip through a futuristic, neon-lit cityscape.",
+      "A thrilling, heart-pumping battle sequence between advanced, robotic mechs.",
+      "A surreal, dreamlike landscape of advanced, cybernetic technology and bizarre, otherworldly creatures.",
+      "An epic, cinematic space battle set against a backdrop of stunning, surreal planets and stars."
+    ]
+  },
+  {
+    "id": 11,
+    "style": "Dreamlike",
+    "prompts": [
+      "A surreal, dreamlike landscape of strange, otherworldly objects and creatures.",
+      "A mesmerizing, hypnotic journey through a strange, surreal world of bizarre and mysterious landscapes.",
+      "A mind-bending, surreal dreamscape of strange, otherworldly architecture and floating objects.",
+      "A surreal, dreamlike landscape of vivid, colorful shapes and patterns.",
+      "A mesmerizing, hypnotic trip through a strange, otherworldly forest filled with vibrant colors and strange creatures.",
+      "A surreal, dreamlike journey through a strange, otherworldly cityscape filled with bizarre architecture and objects.",
+      "A mesmerizing, hypnotic trip through a strange, otherworldly landscape of strange, floating objects and colorful shapes.",
+      "A surreal, dreamlike landscape of strange, otherworldly creatures and objects floating in a sea of vivid colors.",
+      "A mind-bending, surreal landscape of strange, otherworldly shapes and patterns swirling in a sea of colors.",
+      "A surreal, dreamlike journey through a strange, otherworldly world of bizarre architecture and objects."
+    ]
+  },
+  {
+    "id": 15,
+    "style": "Interior Views",
+    "prompts": [
+      "A beautifully-decorated, highly-detailed living room with comfortable furniture and elegant decor.",
+      "A stunning, highly-detailed view of a luxurious, modern kitchen with sleek, sophisticated appliances and lighting.",
+      "A cozy, intimate bedroom with comfortable bedding and warm, inviting lighting.",
+      "A breathtaking, highly-detailed view of an opulent, luxurious bathroom with intricate details and elegant fixtures.",
+      "A beautifully-rendered, highly-detailed view of a spacious, inviting library with comfortable seating and warm lighting.",
+      "A stunning, highly-detailed view of a sophisticated, modern office with sleek, minimalist furniture and advanced technology.",
+      "A breathtaking, highly-detailed view of a spacious, elegant dining room with intricate details and sophisticated decor.",
+      "A cozy, intimate study with comfortable seating and warm, inviting lighting.",
+      "A beautifully-decorated, highly-detailed view of a serene, tranquil meditation room with warm, inviting lighting.",
+      "A stunning, highly-detailed view of a spacious, elegant foyer with sophisticated lighting and luxurious decor."
+    ]
+  },
+  {
+    "id": 16,
+    "style": "Sky",
+    "prompts": [
+      "A stunning, vibrant sunset with vivid colors and warm, inviting lighting.",
+      "A breathtaking, panoramic view of a clear, starry night sky with bright, twinkling stars.",
+      "A mesmerizing, hypnotic view of a dramatic, stormy sky with dark, ominous clouds.",
+      "A surreal, dreamlike view of a colorful, otherworldly sky filled with strange, floating objects.",
+      "A stunning, panoramic view of a majestic, snow-capped mountain range with a clear, blue sky.",
+      "A peaceful, idyllic view of a tranquil, cloudless sky with warm, inviting lighting.",
+      "A surreal, dreamlike view of a strange, otherworldly sky filled with vivid, swirling colors.",
+      "A mesmerizing, hypnotic view of a stunning, otherworldly sunrise with vivid colors and strange, swirling clouds.",
+      "A breathtaking, panoramic view of a clear, blue sky with fluffy, white clouds and warm, inviting lighting.",
+      "A surreal, dreamlike view of a strange, alien sky filled with bizarre, floating objects and vivid, colorful shapes."
+    ]
+  },
+  {
+    "id": 17,
+    "style": "Dutch Masters",
+    "prompts": [
+      "A highly-detailed, beautifully-rendered still life painting of a luxurious, opulent banquet with intricate details and vibrant colors.",
+      "A stunning, highly-detailed portrait painting of a noble, elegant subject with intricate details and dramatic lighting.",
+      "A breathtaking, highly-detailed landscape painting of a majestic, expansive vista with rich colors and intricate details.",
+      "A beautifully-rendered, highly-detailed seascape painting with dramatic lighting and intricate details.",
+      "A stunning, highly-detailed view of an opulent, luxurious interior with rich colors and intricate details.",
+      "A breathtaking, highly-detailed portrait painting of a beautiful, elegant woman with dramatic lighting and intricate details.",
+      "A highly-detailed, beautifully-rendered still life painting of a lush, vibrant bouquet of flowers with intricate details and rich colors.",
+      "A stunning, highly-detailed portrait painting of a powerful, distinguished man with intricate details and dramatic lighting.",
+      "A breathtaking, highly-detailed landscape painting of a serene, tranquil scene with soft, muted colors and intricate details.",
+      "A beautifully-rendered, highly-detailed still life painting of a sumptuous, decadent feast with rich colors and intricate details."
+    ]
+  },
+  {
+    "id": 20,
+    "style": "Modern Computer Animation",
+    "prompts": [
+      "A stunning, highly-detailed 3D animation of an epic, cinematic space battle with advanced visual effects and dramatic music.",
+      "A mesmerizing, hypnotic 3D animation of a futuristic, neon-lit cityscape with fast-paced movement and vibrant colors.",
+      "A breathtaking, highly-detailed 3D animation of a majestic, fantastical world with lush landscapes and vibrant colors.",
+      "A beautifully-rendered 3D animation of a magical, fantastical world filled with strange creatures and vibrant colors.",
+      "A stunning, highly-detailed 3D animation of a surreal, dreamlike world with vivid colors and strange, otherworldly objects.",
+      "A breathtaking, highly-detailed 3D animation of an epic, cinematic battle between advanced, robotic mechs with intense action and drama.",
+      "A mesmerizing, hypnotic 3D animation of a surreal, dreamlike landscape with strange, floating objects and vibrant colors.",
+      "A stunning, highly-detailed 3D animation of a futuristic, technologically-advanced world with sleek, sophisticated design.",
+      "A beautifully-rendered 3D animation of a fantastical, otherworldly world with strange creatures and surreal landscapes.",
+      "A stunning, highly-detailed 3D animation of a magical, enchanted forest with lush, vibrant colors and beautiful lighting."
+    ]
+  },
+  {
+    "id": 18,
+    "style": "Infrared (Experimental Nature Scenes)",
+    "prompts": [
+      "A mesmerizing, hypnotic view of a lush, vibrant forest with warm, inviting lighting and surreal infrared effects.",
+      "A surreal, dreamlike view of a tranquil, serene lake with warm, inviting lighting and strange, otherworldly infrared effects.",
+      "A breathtaking, highly-detailed view of a majestic, snow-capped mountain range with warm, inviting lighting and vibrant infrared colors.",
+      "A beautifully-rendered view of a tranquil, peaceful waterfall with warm, inviting lighting and surreal infrared effects.",
+      "A stunning, panoramic view of a clear, blue sky with fluffy, white clouds and warm, inviting infrared lighting.",
+      "A surreal, dreamlike view of a strange, otherworldly landscape with vivid infrared colors and bizarre, floating objects.",
+      "A mesmerizing, hypnotic view of a lush, vibrant forest with warm, inviting infrared lighting and strange, surreal effects.",
+      "A surreal, dreamlike view of a tranquil, serene lake with warm, inviting infrared lighting and vibrant, surreal colors.",
+      "A breathtaking, highly-detailed view of a majestic, towering mountain peak with warm, inviting infrared lighting and vivid colors.",
+      "A beautifully-rendered view of a peaceful, tranquil forest with warm, inviting infrared lighting and surreal, dreamlike effects."
+    ]
+  },
+  {
+    "id": 19,
+    "style": "Low Poly (Experimental)",
+    "prompts": [
+      "A mesmerizing, hypnotic view of a futuristic, neon-lit cityscape with sleek, low-poly design and vibrant colors.",
+      "A surreal, dreamlike view of a fantastical, otherworldly landscape with strange, low-poly objects and vivid colors.",
+      "A breathtaking, highly-detailed view of a majestic, expansive vista with stunning low-poly design and rich colors.",
+      "A beautifully-rendered view of a tranquil, peaceful forest with warm, inviting low-poly design and surreal, dreamlike effects.",
+      "A stunning, panoramic view of a clear, blue sky with fluffy, white clouds and sleek, low-poly design.",
+      "A surreal, dreamlike view of a strange, alien sky filled with bizarre, floating low-poly objects and vivid colors.",
+      "A mesmerizing, hypnotic view of a lush, vibrant landscape with warm, inviting low-poly design and surreal, dreamlike effects.",
+      "A surreal, dreamlike view of a tranquil, serene lake with warm, inviting low-poly design and vibrant, surreal colors.",
+      "A breathtaking, highly-detailed view of a majestic, towering mountain peak with sleek, low-poly design and vivid colors.",
+      "A beautifully-rendered view of a futuristic, technologically-advanced city with sleek, sophisticated low-poly design and vibrant colors."
+    ]
+  },
+  {
+    "id": 13,
+    "style": "Advanced (No Style Words)",
+    "prompts": [
+      "A stunning, highly-detailed view of an epic, fantastical landscape with breathtaking scenery and vivid colors.",
+      "A mesmerizing, hypnotic view of a surreal, dreamlike world with strange, otherworldly objects and rich, vibrant colors.",
+      "A surreal, otherworldly view of a strange, alien landscape with bizarre, floating objects and beautiful, vibrant colors.",
+      "A breathtaking, highly-detailed view of a majestic, snow-capped mountain range with stunning scenery and vivid colors.",
+      "A beautifully-rendered view of a tranquil, peaceful forest with lush greenery and warm, inviting lighting.",
+      "A stunning, panoramic view of a clear, blue sky with fluffy, white clouds and beautiful, warm lighting.",
+      "A mesmerizing, hypnotic view of a magical, fantastical world with strange creatures and beautiful, vibrant colors.",
+      "A surreal, dreamlike view of a tranquil, peaceful lake with warm, inviting lighting and beautiful colors.",
+      "A breathtaking, highly-detailed view of a majestic, towering mountain peak with stunning scenery and beautiful, warm lighting.",
+      "A beautifully-rendered view of a futuristic, technologically-advanced city with sleek, sophisticated design and beautiful, vibrant colors."
+    ]
+  }
+]
