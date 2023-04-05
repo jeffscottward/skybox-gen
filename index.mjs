@@ -1,11 +1,12 @@
 import fs from "fs";
+import fetch from "node-fetch";
 import Pusher from "pusher-js";
 import { BlockadeLabsSdk } from "@blockadelabs/sdk";
 
-//app_id: "1555452",
-// const pusher = new Pusher("a6a7b7662238ce4494d5", {
-//   cluster: "mt1",
-// });
+// Setup the Pusher client
+const pusher = new Pusher("a6a7b7662238ce4494d5", {
+  cluster: "mt1",
+});
 
 // Setup the SDK
 const sdk = new BlockadeLabsSdk({
@@ -34,6 +35,31 @@ async function getImage(promptText, styleID) {
     prompt: promptText, // Required
     skybox_style_id: styleID, // Required
   });
+
+  // Subscribe to the Pusher channel for this generation
+  const channelName = generation.pusher_channel;
+  const channel = pusher.subscribe(channelName);
+
+  // Listen for status updates on the channel
+  channel.bind("status_update", async function (data) {
+    const { status, file_url } = data;
+
+    if (status === "complete") {
+      // Save the file to disk
+      const filename = `${generation.id}.png`;
+      const fileData = fs.createWriteStream(`./${filename}`);
+      const response = await fetch(file_url);
+      response.body.pipe(fileData);
+
+      console.log(`Image saved to ${filename}`);
+
+      // Unsubscribe from the channel
+      channel.unsubscribe();
+    } else {
+      console.log(status);
+    }
+  });
+
   return generation;
 }
 
@@ -48,8 +74,8 @@ async function generateSkyboxes() {
 
     for (const prompt in prompts) {
       try {
-        const genImage = await getImage(prompts[prompt], styleID);
-        console.log(genImage);
+        const req = await getImage(prompts[prompt], styleID);
+        console.log("🚀 ~ file: index.mjs:78 ~ generateSkyboxes ~ req:", req);
       } catch (error) {
         console.log(error);
       }
