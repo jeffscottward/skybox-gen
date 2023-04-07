@@ -30,37 +30,40 @@ function readLocalPromptsFILE() {
 }
 
 // Generate the skybox
-async function getImage(promptText, styleID) {
-  const generation = await sdk.generateSkybox({
-    prompt: promptText, // Required
-    skybox_style_id: styleID, // Required
+function getImage(promptText, styleID) {
+  return new Promise(async (resolve, reject) => {
+    const generation = await sdk.generateSkybox({
+      prompt: promptText, // Required
+      skybox_style_id: styleID, // Required
+    });
+
+    // Subscribe to the Pusher channel for this generation
+    const channelName = generation.pusher_channel;
+    const channel = pusher.subscribe(channelName);
+
+    // Listen for status updates on the channel
+    channel.bind("status_update", async function (data) {
+      const { status, file_url } = data;
+
+      if (status === "complete") {
+        // Save the file to disk
+        const filename = `${generation.id}.png`;
+        const fileData = fs.createWriteStream(`./${filename}`);
+        const response = await fetch(file_url);
+        response.body.pipe(fileData);
+
+        console.log(`Image saved to ${filename}`);
+
+        // Unsubscribe from the channel
+        channel.unsubscribe();
+
+        // Resolve the Promise
+        resolve();
+      } else {
+        console.log(status);
+      }
+    });
   });
-
-  // Subscribe to the Pusher channel for this generation
-  const channelName = generation.pusher_channel;
-  const channel = pusher.subscribe(channelName);
-
-  // Listen for status updates on the channel
-  channel.bind("status_update", async function (data) {
-    const { status, file_url } = data;
-
-    if (status === "complete") {
-      // Save the file to disk
-      const filename = `${generation.id}.png`;
-      const fileData = fs.createWriteStream(`./${filename}`);
-      const response = await fetch(file_url);
-      response.body.pipe(fileData);
-
-      console.log(`Image saved to ${filename}`);
-
-      // Unsubscribe from the channel
-      channel.unsubscribe();
-    } else {
-      console.log(status);
-    }
-  });
-
-  return generation;
 }
 
 // Loop through the prompts and generate the skyboxes
@@ -74,8 +77,10 @@ async function generateSkyboxes() {
 
     for (const prompt in prompts) {
       try {
-        const req = await getImage(prompts[prompt], styleID);
-        console.log("🚀 ~ file: index.mjs:78 ~ generateSkyboxes ~ req:", req);
+        await getImage(prompts[prompt], styleID);
+        console.log(
+          `Generated skybox for prompt ${prompts[prompt]} and style ${styleID}`
+        );
       } catch (error) {
         console.log(error);
       }
