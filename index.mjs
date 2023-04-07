@@ -19,7 +19,7 @@ const sdk = new BlockadeLabsSdk({
 function readLocalPromptsFILE() {
   try {
     // Read the file synchronously
-    const fileData = fs.readFileSync("./SkyboxPromptsTEST.json", "utf8");
+    const fileData = fs.readFileSync("./SkyboxPrompts.json", "utf8");
 
     // Parse the JSON data
     const jsonData = JSON.parse(fileData);
@@ -90,6 +90,7 @@ async function generateSkyboxes() {
   const SKYBOXLIST = readLocalPromptsFILE();
 
   // Loop through each prompt group in the prompts file
+  // Loop through each prompt group in the prompts file
   for (const promptGroup in SKYBOXLIST) {
     const styleID = SKYBOXLIST[promptGroup]["id"];
     const styleName = SKYBOXLIST[promptGroup]["style"];
@@ -105,11 +106,10 @@ async function generateSkyboxes() {
         console.log(error);
       }
     }
-  }
 
-  // Terminate the Node.js process
-  process.exit();
+    // Wait for all prompts in this group to finish before moving on to the next group
+    await new Promise((resolve) => setTimeout(resolve, 0));
+  }
 }
 
-// Run the script
 generateSkyboxes();
