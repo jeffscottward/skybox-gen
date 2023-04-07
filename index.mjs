@@ -1,3 +1,4 @@
+// Import required modules
 import fs from "fs";
 import fetch from "node-fetch";
 import Pusher from "pusher-js";
@@ -5,13 +6,13 @@ import { BlockadeLabsSdk } from "@blockadelabs/sdk";
 
 // Setup the Pusher client
 const pusher = new Pusher("a6a7b7662238ce4494d5", {
-  cluster: "mt1",
+  cluster: "mt1", // Cluster for the Pusher client
 });
 
 // Setup the SDK
 const sdk = new BlockadeLabsSdk({
-  api_key: "SnIPcw1UH490N0N8MDJHpd88RXxZ805En50DzWfesXOaWAoAbxAhlWmxbU00",
-  env: "production",
+  api_key: "SnIPcw1UH490N0N8MDJHpd88RXxZ805En50DzWfesXOaWAoAbxAhlWmxbU00", // API key for the BlockadeLabs SDK
+  env: "production", // Environment for the BlockadeLabs SDK
 });
 
 // Read in the prompts file
@@ -30,25 +31,43 @@ function readLocalPromptsFILE() {
 }
 
 // Generate the skybox
-function getImage(promptText, styleID) {
-  return new Promise(async (resolve, reject) => {
-    const generation = await sdk.generateSkybox({
-      prompt: promptText, // Required
-      skybox_style_id: styleID, // Required
-    });
+async function getImage(promptText, styleID, styleName) {
+  // Generate the skybox using the BlockadeLabs SDK
+  const generation = await sdk.generateSkybox({
+    prompt: promptText, // Required prompt text for the skybox generation
+    skybox_style_id: styleID, // Required style ID for the skybox generation
+  });
 
-    // Subscribe to the Pusher channel for this generation
-    const channelName = generation.pusher_channel;
-    const channel = pusher.subscribe(channelName);
+  // Subscribe to the Pusher channel for this generation
+  const channelName = generation.pusher_channel;
+  const channel = pusher.subscribe(channelName);
 
-    // Listen for status updates on the channel
+  // Listen for status updates on the channel
+  await new Promise((resolve, reject) => {
     channel.bind("status_update", async function (data) {
       const { status, file_url } = data;
 
       if (status === "complete") {
         // Save the file to disk
-        const filename = `${generation.id}.png`;
-        const fileData = fs.createWriteStream(`./${filename}`);
+        const prefix = `${styleID}_${styleName
+          .toLowerCase()
+          .replace(/\s+/g, "_")}_`;
+        const generationFolder = `./generations/${styleID}_${styleName
+          .toLowerCase()
+          .replace(/\s+/g, "_")}/`;
+        const filename = `${prefix}${generation.id}.png`;
+
+        // Create the generations folder if it doesn't exist
+        if (!fs.existsSync(`./generations`)) {
+          fs.mkdirSync(`./generations`);
+        }
+
+        // Create the style folder if it doesn't exist
+        if (!fs.existsSync(generationFolder)) {
+          fs.mkdirSync(generationFolder);
+        }
+
+        const fileData = fs.createWriteStream(`${generationFolder}${filename}`);
         const response = await fetch(file_url);
         response.body.pipe(fileData);
 
@@ -57,7 +76,6 @@ function getImage(promptText, styleID) {
         // Unsubscribe from the channel
         channel.unsubscribe();
 
-        // Resolve the Promise
         resolve();
       } else {
         console.log(status);
@@ -68,24 +86,30 @@ function getImage(promptText, styleID) {
 
 // Loop through the prompts and generate the skyboxes
 async function generateSkyboxes() {
-  // Get the prompts
+  // Get the prompts from the prompts file
   const SKYBOXLIST = readLocalPromptsFILE();
 
+  // Loop through each prompt group in the prompts file
   for (const promptGroup in SKYBOXLIST) {
     const styleID = SKYBOXLIST[promptGroup]["id"];
+    const styleName = SKYBOXLIST[promptGroup]["style"];
     const prompts = SKYBOXLIST[promptGroup]["prompts"];
 
+    // Loop through each prompt in the prompt group
     for (const prompt in prompts) {
       try {
-        await getImage(prompts[prompt], styleID);
-        console.log(
-          `Generated skybox for prompt ${prompts[prompt]} and style ${styleID}`
-        );
+        // Generate the skybox
+        await getImage(prompts[prompt], styleID, styleName);
+        console.log(`Finished generating skybox for prompt ${prompts[prompt]}`);
       } catch (error) {
         console.log(error);
       }
     }
   }
+
+  // Terminate the Node.js process
+  process.exit();
 }
 
+// Run the script
 generateSkyboxes();

@@ -4,15 +4,15 @@
     "style": "Fantasy Landscape",
     "prompts": [
       "A mystical, enchanted forest with ancient trees and magical creatures.",
-      "A breathtaking, panoramic view of a massive, imposing castle on a mountaintop.",
-      "A surreal, dreamlike environment with floating islands and strange, otherworldly creatures.",
-      "An ethereal, mystical garden filled with glowing flowers and exotic plants.",
-      "A magical, whimsical land of fairies and mythical creatures, with colorful forests and sparkling waterfalls.",
-      "A vast, open plain filled with towering, mystical pillars and ancient ruins.",
-      "A stunning, otherworldly landscape of jagged cliffs and glowing crystals.",
-      "A dark, ominous forest filled with twisted, gnarled trees and eerie creatures.",
-      "A magical, underwater world filled with colorful coral and strange sea creatures.",
-      "A fantastical, mystical city with towering spires and sparkling lights."
+      "A breathtaking, panoramic view of a massive, imposing castle on a mountaintop."
+    ]
+  },
+  {
+    "id": 3,
+    "style": "Anime Art Style",
+    "prompts": [
+      "A bustling, neon-lit city filled with high-tech gadgets and futuristic architecture.",
+      "A colorful, playful world filled with cute, chibi-style characters and whimsical scenery."
     ]
   }
 ]
